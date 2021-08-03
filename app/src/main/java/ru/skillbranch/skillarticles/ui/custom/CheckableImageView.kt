@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.Checkable
 
-class CheсkableImageView @JvmOverloads constructor(
+class CheckableImageView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
