@@ -34,7 +34,7 @@ class ArticleViewModel(private val articleId: String) :
             info ?: return@subscribeOnDataSource null
             state.copy(
                 isBookmark = info.isBookmark,
-                isLike = info.isLike,
+                isLike = info.isLike
             )
         }
         subscribeOnDataSource(repository.getAppSettings()) { settings, state ->
