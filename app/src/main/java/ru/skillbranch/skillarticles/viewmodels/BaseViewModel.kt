@@ -24,14 +24,14 @@ abstract class BaseViewModel<T>(initState: T) : ViewModel() {
     }
 
     fun observeState(owner: LifecycleOwner, onChanged: (newState: T) -> Unit) {
-        state.observe(owner, Observer{ onChanged(it) })
+        state.observe(owner, Observer { onChanged(it) })
     }
 
     fun observeNotifications(owner: LifecycleOwner, onNotify: (notification: Notify) -> Unit) {
         notification.observe(owner, EventObserver { onNotify(it) })
     }
 
-    protected fun <S> subscribeOnDataSource(
+    fun <S> subscribeOnDataSource(
         source: LiveData<S>,
         onChanged: (newValue: S, currentState: T) -> T?
     ) {
